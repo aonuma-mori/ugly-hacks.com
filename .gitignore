@@ -1,0 +1,7 @@
+.DS_Store
+
+# docker
+mysql/*
+php7.2/*
+
+html/note/wp-config.php
