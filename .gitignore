@@ -5,3 +5,5 @@ mysql/*
 php7.2/*
 
 html/note/wp-config.php
+html/note/wp-content/languages/plugins/*
+html/note/wp-content/plugins/*
