@@ -6,7 +6,7 @@ include("block/common.php");
 ?>
 <!DOCTYPE html>
 <html>
-  <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/（ページの種類）#">
+  <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/<?php echo $blog_page_type; ?>#">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,18 +16,18 @@ include("block/common.php");
 
     <meta name="robots" content="index,follow">
 
-    <meta property="og:admins" content="（FBのID）">
+    <meta property="og:admins" content="osamthing">
     <meta property="og:title" content="<?php echo $blog_title; ?>">
-    <meta property="og:type" content="（ページの種類）">
+    <meta property="og:type" content="<?php echo $blog_page_type; ?>">
     <meta property="og:description" content="<?php echo $blog_description; ?>">
-    <meta property="og:url" content="（ページのURL）">
-    <meta property="og:image" content="（ogp画像のURL）">
+    <meta property="og:url" content="<?php echo $blog_permalink; ?>">
+    <meta property="og:image" content="<?php echo $og_image; ?>">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="<?php echo $blog_title; ?>">
-    <meta name="twitter:card" content="（カード種類）">
-    <meta name="twitter:site" content="（@Twitterユーザー名）">
+    <meta name="twitter:card" content="Summary Card">
+    <meta name="twitter:site" content="@a141828410">
 
-    <link rel="canonical" href="（正しいページURL）">
+    <link rel="canonical" href="<?php echo $blog_permalink; ?>">
 
     <link rel="stylesheet" href="（cssのURL）" media="screen">
     <script type="text/javascript" src="（jsのURL）"></script>
