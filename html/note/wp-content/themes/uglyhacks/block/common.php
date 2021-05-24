@@ -27,26 +27,32 @@ if ( is_front_page() && is_home() ) {
   $blog_permalink = home_url();
   $blog_description = DESCRIPTION;
   $blog_title = BLOG_TITLE;
+  $blog_page_type = "website";
 } elseif ( is_home() ) {
   $site_location = 'home';
   $blog_permalink = home_url();
   $blog_description = DESCRIPTION;
   $blog_title = BLOG_TITLE;
+  $blog_page_type = "website";
 } elseif ( is_front_page() ) {
   $site_location = 'front_page';
   $blog_permalink = home_url();
   $blog_description = DESCRIPTION;
   $blog_title = BLOG_TITLE;
+  $blog_page_type = "website";
 } elseif ( is_single()) {
   $site_location = 'single';
   // $blog_single_description = get_the_excerpt($post_id);
   $blog_permalink = get_permalink($post_id);
-  $title = " | ".get_the_title();
+  // $title = " | ".get_the_title();
   $blog_description = get_the_excerpt($post_id)." | ".DESCRIPTION;
   $blog_title = get_the_title()." | ".BLOG_TITLE;
+  $blog_page_type = "artcle";
 } else {
   $site_location = 'else';
   $blog_title = BLOG_TITLE;
+  $blog_permalink = home_url();
+  $blog_page_type = "artcle";
 }
 
 // $blog_description = mb_substr($blog_description, 0, 120);
@@ -60,3 +66,4 @@ echo "post_title: ".$post_title."<br>\n";
 echo "og_image: ".$og_image."<br>\n";
 echo "blog_title: ".$blog_title."<br>\n";
 echo "blog_permalink: ".$blog_permalink."<br>\n";
+echo "blog_page_type: ".$blog_page_type."<br>\n";
