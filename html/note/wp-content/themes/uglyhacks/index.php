@@ -26,6 +26,8 @@ include("block/common.php");
     <meta property="og:site_name" content="<?php echo $blog_title; ?>">
     <meta name="twitter:card" content="Summary Card">
     <meta name="twitter:site" content="@a141828410">
+    <meta name="twitter:description" content="@a141828410">
+    <meta name="twitter:image" content="<?php echo $og_image; ?>">
 
     <link rel="canonical" href="<?php echo $blog_permalink; ?>">
 
