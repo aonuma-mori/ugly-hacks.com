@@ -67,3 +67,12 @@ echo "og_image: ".$og_image."<br>\n";
 echo "blog_title: ".$blog_title."<br>\n";
 echo "blog_permalink: ".$blog_permalink."<br>\n";
 echo "blog_page_type: ".$blog_page_type."<br>\n";
+
+/*
+〇	twitter:card	カードの種類	-
+twitter:site	WebサイトのTwitterID	-
+twitter:creator	コンテンツ作成者のTwitterID	-
+〇	twitter:title	ページのタイトル	og:title
+〇	twitter:description	ページの説明	og:description
+〇	twitter:image	アイキャッチ画像のURL	og:image
+*/
