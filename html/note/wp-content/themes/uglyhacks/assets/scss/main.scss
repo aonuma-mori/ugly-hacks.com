@@ -83,6 +83,17 @@ body{
       }
     }
   }
+  footer {
+    margin: 0 auto;
+    height: 200px;
+    color:  #fff;
+    background: #6c757d;
+    .copyright {
+      letter-spacing: 1px;
+      padding: 18px;
+      font-size: 13px;
+    }
+  }
 }
 
 

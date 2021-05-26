@@ -137,6 +137,9 @@ include("block/common.php");
       </div>
     </main>
     <footer>
+      <div class="copyright">
+				<p class="text-center">(c) 2021 uglyhacks.com All rights reserved.</p>
+      </div>
     </footer>
     <script type="text/javascript" src="（ここにjsのURL）"></script>
   </body>
