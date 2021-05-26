@@ -1,0 +1,89 @@
+@import "_bootstrap";
+
+/*
+bootstrap5
+xs <576px 
+sm ≥576px
+md ≥768px
+lg ≥992px
+xl ≥1200px
+xxl ≥1400px
+*/
+
+/* break point */
+@media (max-width: 575px) {}
+@media (min-width: 576px) and (max-width: 768px) {}
+@media (min-width: 769px) and (max-width: 992px) {}
+@media (min-width: 993px) and (max-width: 1200px) {}
+@media (min-width: 1201px) {}
+
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+  header {
+    div.break-point-bar {
+      height: 5px;
+      /* sp/pd */
+      @media (max-width: 575px) { background: #000; }
+      @media (min-width: 576px) and (max-width: 768px) { background: #fff; }
+      @media (min-width: 769px) and (max-width: 992px) { background: #808080; }
+      /*pc*/
+      @media (min-width: 993px) and (max-width: 1200px) { background: #d3d3d3; }
+      @media (min-width: 1201px) { background: #880000; }
+    }
+    nav.bg-light {
+      background-color: #fff !important;
+      div {
+        a {
+          h1.site-title {
+            font-size: 1.25rem;
+            margin-bottom: 2px;
+          }
+        }
+        form.pc {
+          /* sp/pd */
+          @media (max-width: 575px) { display: none !important; }
+          @media (min-width: 576px) and (max-width: 768px) { display:none !important; }
+          @media (min-width: 769px) and (max-width: 992px) { display:none !important; }
+          /*pc*/
+          @media (min-width: 993px) and (max-width: 1200px) { display:block; }
+          @media (min-width: 1201px) { display:block; }
+        }
+        
+        form.pc {
+          button.btn {
+            border-radius: 0px 3px 3px 0px;
+            margin-left: -17px;
+            svg {
+              margin-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    form.sp {
+      /* sp/pd */
+      @media (max-width: 575px) { display:block; }
+      @media (min-width: 576px) and (max-width: 768px) { display:block; }
+      @media (min-width: 769px) and (max-width: 992px) { display:block; }
+      /*pc*/
+      @media (min-width: 993px) and (max-width: 1200px) { display: none !important; }
+      @media (min-width: 1201px) { display: none !important; }
+    }
+    form.sp {
+      margin: 0px 50px;
+      button.btn {
+        border-radius: 0px 3px 3px 0px;
+        margin-left: -17px;
+        svg {
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+
+
