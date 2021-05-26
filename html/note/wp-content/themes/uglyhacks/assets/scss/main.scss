@@ -82,6 +82,43 @@ body{
         }
       }
     }
+    .top-article-block {
+      margin-top: 70px;
+      .top-article {
+        // margin: -7px;
+        margin-bottom: 18px;
+        
+        .top-article-cell {
+          font-size: 14px;
+          height: 200px;
+          margin: 3px;
+          // background: #c1c1c1;
+          
+          border: 1px solid #c1c1c1;
+          border-radius: 3px;
+          .top-article-text {
+            overflow: hidden;
+            padding: 15px;
+            h2 {
+              font-size: 18px;
+              line-height: 26px;
+              overflow: hidden;
+            }
+            p {
+
+            }
+          }
+          
+          .top-article-cell-photo {
+            width: 100%;
+            height: 120px;
+          }
+
+
+        }
+      }
+    }
+
   }
   footer {
     margin: 0 auto;
