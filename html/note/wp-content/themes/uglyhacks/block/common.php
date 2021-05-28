@@ -57,16 +57,16 @@ if ( is_front_page() && is_home() ) {
 
 // $blog_description = mb_substr($blog_description, 0, 120);
 
-echo "blog_home_url: ".$blog_home_url."<br>\n";
-echo "site_location: ".$site_location."<br>\n";
-echo "post_id: ".$post_id."<br>\n";
-echo "blog_description: ".$blog_description."<br>\n";
-echo "url: ".$url."<br>\n";
-echo "post_title: ".$post_title."<br>\n";
-echo "og_image: ".$og_image."<br>\n";
-echo "blog_title: ".$blog_title."<br>\n";
-echo "blog_permalink: ".$blog_permalink."<br>\n";
-echo "blog_page_type: ".$blog_page_type."<br>\n";
+// echo "blog_home_url: ".$blog_home_url."<br>\n";
+// echo "site_location: ".$site_location."<br>\n";
+// echo "post_id: ".$post_id."<br>\n";
+// echo "blog_description: ".$blog_description."<br>\n";
+// echo "url: ".$url."<br>\n";
+// echo "post_title: ".$post_title."<br>\n";
+// echo "og_image: ".$og_image."<br>\n";
+// echo "blog_title: ".$blog_title."<br>\n";
+// echo "blog_permalink: ".$blog_permalink."<br>\n";
+// echo "blog_page_type: ".$blog_page_type."<br>\n";
 
 /*
 〇	twitter:card	カードの種類	-
