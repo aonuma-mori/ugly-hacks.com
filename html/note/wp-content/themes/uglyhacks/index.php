@@ -114,141 +114,46 @@ include("block/common.php");
       </button>
     </form> 
 
-
-		
-
 		<div class="container top-article-block">
 			<div class="row">
 
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-					<!-- <img src="/note/wp-content/themes/uglyhacks/assets/img/dummy.jpg" class="top-article-cell-photo"> -->
-						<div class="top-article-text">
-							<h2>Githubアカウントを複数個で使い分ける設定</h2>
-							<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-						</div>
+				<div class="top-article-cell">
+				
+					<div class="top-article-text">
+						<h2>
+							
+								<?php
+								$thumbnail_id = get_post_thumbnail_id();
+								$eimg = wp_get_attachment_image_src( $thumbnail_id , 'small' );
+								// var_dump($eimg[0]);
+								// the_post_thumbnail('thumbnail');
+								?>
+								<?php if ($eimg[0]) { ?>
+									<div class="photo-frame">
+									<img src="<?php echo $eimg[0]; ?>" class="top-article-cell-photo">
+								</div>
+								<?php } ?>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
+							</a>
+						</h2>
+						<p><?php the_time('Y.n.j (D)'); ?>
+							<?php if (!empty(get_the_excerpt())) {
+								$excerpt = preg_replace('/\A[\x00\s]++|[\x00\s]++\z/u', '', get_the_excerpt());
+								$excerpt = str_replace('&times; Close ', '', $excerpt);
+								$excerpt = trim($excerpt);
+								echo $excerpt;
+							} ?>
+						</P>
 					</div>
 				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-					<img src="/note/wp-content/themes/uglyhacks/assets/img/dummy.jpg" class="top-article-cell-photo">
-						<div class="top-article-text">
-							<h2>Githubアカウントを複数個で使い分ける設定</h2>
-							<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-			
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 top-article">
-					<div class="top-article-cell">
-						<h2>Githubアカウントを複数個で使い分ける設定</h2>
-						<p>あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお</P>
-					</div>
-				</div>
-
 			</div>
-		</div>
+			<?php endwhile; else: ?>
+        <div>記事がありません。</div>
+      <?php endif; ?>
 
-
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <div class="article-contents mb30">
-            <div class="fs18 index-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-            <div class="fs11 text-right mr15"><?php the_time('Y.n.j D'); ?></div>
-            <div class="fs13 wp-contents">
-              <!-- icatch image -->
-              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bland-icon.png" class="float-left" style="margin:0 15px 0 0; width: 45px;"> -->
-
-              <?php
-              $thumbnail_id = get_post_thumbnail_id();
-              $eimg = wp_get_attachment_image_src( $thumbnail_id , 'small' );
-              // var_dump($eimg[0]);
-              // the_post_thumbnail('thumbnail');
-              ?>
-              <?php if ($eimg[0]) { ?>
-              <div class="trim-thumbnail float-left"><img src="<?php echo $eimg[0]; ?>" class="top-thumbnali"></div>
-              <?php } ?>
-
-              <?php if (!empty(get_the_excerpt())) {
-                  $excerpt = preg_replace('/\A[\x00\s]++|[\x00\s]++\z/u', '', get_the_excerpt());
-                  $excerpt = str_replace('&times; Close ', '', $excerpt);
-                  $excerpt = trim($excerpt);
-                  echo $excerpt;
-              } ?>
-
-            </div>
-            <div class="top-post-meta">
-              <div class="top-category"><?php the_category(); ?></div>
-              <div class="top-tags"><?php the_tags("<span class='tag'><i class=\"fas fa-tag\"></i>","","</span>"); ?></div>
-            </div>
-
-          </div>
-          <?php endwhile; else: ?>
-              <div>記事がありません。</div>
-          <?php endif; ?>
 
           <?php if( function_exists("the_pagination") ) the_pagination(); ?>
       </div>
