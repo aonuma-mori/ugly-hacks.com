@@ -67,11 +67,6 @@ include("block/common.php");
 				</div>
 			</div>
 
-      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-      <?php endif; ?>
-
-
-
     </main>
     <footer>
       <div class="copyright">
