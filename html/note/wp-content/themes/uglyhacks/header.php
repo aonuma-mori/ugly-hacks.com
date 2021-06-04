@@ -48,7 +48,7 @@ include("block/common.php");
   <div class="break-point-bar"></div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand site-title" href="<?php echo $blog_home_url; ?>"><h1 class="site-title">Uglyhacks</h1></a>
+      <a class="navbar-brand site-title" href="/"><h1 class="site-title">Uglyhacks</h1></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -59,7 +59,7 @@ include("block/common.php");
             <a class="nav-link active" aria-current="page" href="<?php echo $blog_home_url; ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="/note/?page_id=59">Archives</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
@@ -78,7 +78,7 @@ include("block/common.php");
       </div>
       <form action="<?php echo $blog_home_url; ?>" class="d-flex align-items-end pc searchform" role="search" method="get" id="searchform">
         <input name="s" id="s" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-secondary" type="submit">
+        <button class="btn btn-secondary" type="submit" name="search">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
           </svg>

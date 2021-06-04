@@ -9,9 +9,9 @@ include("block/common.php");
 		<span class="page-out">
 			<a href="/note/">Home</a>
 		</span>&nbsp;>&nbsp;
-		<span class="page-scope">Category</span>
+		<span class="page-scope">Tags</span>
 	</p>
-	<h2>Category</h2>
+	<h2>Tags</h2>
 </div>
 
 <div class="container article-block">

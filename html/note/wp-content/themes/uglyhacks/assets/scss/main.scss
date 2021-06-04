@@ -91,6 +91,26 @@ body{
     .search-form {
       margin-top: 20px;
     }
+    .page-header {
+	    .breadcrumb {
+        color: #666;
+        font-size: 13px;
+        .page-out {
+          a:link, a:visited {
+            text-decoration: none;
+            color: #4682b4;
+          }
+        }
+      }
+      h2 {
+        color: #333;
+        letter-spacing: 1px;
+      }
+      .page-header-text {
+        font-size: 13px;
+        color: #666;
+      }
+    }
     .top-article-block {
       margin-top: 70px;
       .top-article {
@@ -331,6 +351,11 @@ body{
           }
         }
       }
+    }
+    /* search everything */
+    .search-everything-highlight-color {
+      background: linear-gradient(transparent 75%, #c1e0ff 75%) !important;
+      // font-weight: bold;
     }
   }//main
   footer {
