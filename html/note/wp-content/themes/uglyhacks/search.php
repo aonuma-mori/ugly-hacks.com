@@ -1,6 +1,7 @@
 <?php
 include("define.php");
 include("block/common.php");
+var_dump(WP_PLUGIN_DIR);
 ?>
 <?php get_header(); ?>
 
