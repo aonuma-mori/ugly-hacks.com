@@ -1,7 +1,7 @@
 <?php
 include("define.php");
 include("block/common.php");
-var_dump(WP_PLUGIN_DIR);
+// var_dump(WP_PLUGIN_DIR);
 ?>
 <?php get_header(); ?>
 
@@ -58,7 +58,7 @@ var_dump(WP_PLUGIN_DIR);
       <?php endif; ?>
     </div>
     <div class="col-sm-5 col-md-4 col-lg-3 sidebar">
-    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
       <?php endif; ?>
     </div>
   </div>
