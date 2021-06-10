@@ -4,58 +4,41 @@ include("block/common.php");
 ?>
 <?php get_header(); ?>
 
+
+<?php
+  /**
+   * カテゴリーを取得
+   */
+  $category = get_the_category();
+  $cat = $category[0];
+  $cat_name = $cat->name;
+  $cat_id = $cat->cat_ID;
+  $cat_slug = $cat->slug;
+  $cat_link = esc_url(get_category_link($cat_id));
+
+  // echo $cat_name;
+  // echo $cat_link; 
+?>
+
 <div class="container page-header">
 	<p class="breadcrumb">
 		<span class="page-out">
 			<a href="/note/">Home</a>
 		</span>&nbsp;>&nbsp;
-		<span class="page-scope">
-			Archives
-    </span>
+    <span class="page-scope">
+      <?php echo mb_substr(get_the_title(),0,12)."..."; ?>
+    <span>
 	</p>
 
-	<div class="container article-block">
+<div class="container article-block">
   <div class="row">
     <div class="col-sm-7 col-md-8 col-lg-9 main">
       <div class="single-article">
-        <h2>Archives</h2>
+        <h2><?php echo the_title(); ?></h2>
         <div class="single-article-text">
-
-        <?php
-					/* All Categories */
-					$args = array(
-						'orderby' => 'order',
-						'order' => 'ASC',
-						'exclude' => '1'
-					);
-					$categories = '';
-					foreach (get_categories($args) as $key => $value) {
-						echo "<h3 class=\"archives_block_title fs18\">".$value->cat_name."</h3>";
-						echo '<ul class="link_block">';
-						query_posts('posts_per_page=-1');
-						if ( have_posts() ) :
-								while ( have_posts() ) : the_post();
-								if (in_category(array($value->cat_name))) {
-									$permalink = get_the_permalink();
-									echo '<li>';
-									echo '<a href="'.$permalink.'">';
-									the_title();
-									echo '</a>';
-									echo '</li>';
-								}
-							endwhile;
-						else:
-							// get nothing
-						endif;
-
-						/* Set Query */
-						wp_reset_query();
-						echo '</ul>';
-						echo '<br clear="both">';
-					}
-				?>
-
+          <?php the_content(); ?>
           <br clear="both">
+          <?php the_time('Y.n.j (D)'); ?>
         </div>
         <div class="post_meta clearfix">
           <div class="category"><?php the_category(); ?></div>
@@ -69,6 +52,10 @@ include("block/common.php");
     </div>
   </div>
 </div>
+
+
+
+
 
 </main><!-- header-include -->
   <footer>
