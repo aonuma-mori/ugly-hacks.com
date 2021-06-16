@@ -4,7 +4,6 @@ include("block/common.php");
 ?>
 <?php get_header(); ?>
 
-
 <?php
   /**
    * カテゴリーを取得

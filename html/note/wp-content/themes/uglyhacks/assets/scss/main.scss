@@ -387,6 +387,7 @@ body{
             
             code {
               display: inline-block;
+              border: none;
             }
           }
           blockquote {
@@ -413,6 +414,14 @@ body{
 
           p {
             font-size: 14px;
+            code {
+              color: #880000;
+              word-wrap: break-word;
+              border: 1px solid #880000;
+              padding: 2px 6px;
+              margin: 0px 2px;
+              border-radius: 3px;
+            }
             img {
               width: 100%;
               margin: 10px 0;
