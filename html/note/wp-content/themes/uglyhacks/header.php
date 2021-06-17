@@ -29,6 +29,8 @@ include("block/common.php");
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo BLOG_CSS_PATH; ?>" media="screen">
 		
+    <script type="text/javascript" src="/note/wp-content/themes/uglyhacks/assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/note/wp-content/themes/uglyhacks/assets/js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="<?php echo BLOG_JS_PATH; ?>"></script>
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="（アップルタッチアイコンの画像URL）">
@@ -94,7 +96,8 @@ include("block/common.php");
 		var app1 = new Vue({
 			el: '#app-1',                        /* #app-1 要素に対して Vue を適用する */
 			data: { message: 'Hello world!' }    /* message という名前のデータを定義する */
-		})
+		});
+
 		</script>
 
 		<div class="container search-form">
