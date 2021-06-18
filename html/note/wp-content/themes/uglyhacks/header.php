@@ -10,6 +10,7 @@ include("block/common.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="email=no,telephone=no,address=no">
 		<meta name="env" content="<?php echo WP_ENV; ?>">
+    <meta name="post_id" content="<?php echo $post_id; ?>">
     <title><?php echo $blog_title; ?></title>
     <meta name="description" content="<?php echo $blog_description; ?>">
     <meta name="robots" content="index,follow">
@@ -61,17 +62,24 @@ include("block/common.php");
             <a class="nav-link active" aria-current="page" href="<?php echo $blog_home_url; ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/note/?page_id=59">Archives</a>
+            <?php
+              if (WP_ENV == "sand") {
+                $archives_path = "/note/?page_id=59";
+              } else {
+                $archives_path = "/note/archivepage/";
+              }
+            ?>
+            <a class="nav-link" href="<?php echo $archives_path; ?>">Archives</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
+            Frequently index
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="https://ugryhacks.com/note/docker/">Docker</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>

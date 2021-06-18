@@ -172,6 +172,9 @@ body{
                   }
                 }
               }
+              p {
+                word-wrap: break-word;
+              }
             }
           }
         }
@@ -184,6 +187,43 @@ body{
         .top-article {
           font-size: 14px;
           line-height: 23px;
+          .top-article-cell {
+            margin-bottom: 20px;
+            // overflow: hidden;
+            // font-size: 14px;
+            border-bottom: 1px solid #c1c1c1;
+            .top-article-text {
+              h2 {
+                font-size: 19px;
+                line-height: 26px;
+                overflow: hidden;
+                a:link, a:visited {
+                  color: #333;
+                  text-decoration: none;
+                }
+                .photo-frame {
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  float: left;
+                  margin-right: 7px;
+                  position: relative;
+                  .top-article-cell-photo {
+                    width: 120px;
+                    height: auto;
+                    z-index: 10000000000;
+                    position: absolute;
+                    top: 0;
+                    left: -25px;
+                    right: -25px;
+                    bottom: 0;
+                    margin: auto;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -230,7 +270,7 @@ body{
                 }
               }
               p {
-
+                word-wrap: break-word;
               }
             }
           }
