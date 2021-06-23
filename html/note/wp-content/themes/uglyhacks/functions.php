@@ -50,3 +50,29 @@ EOM;
 add_filter('image_send_to_editor','image_wrap',10,8);
 
 
+/* 新規記事の場合はデフォルトで指定のテキストを挿入する */
+add_filter('the_editor_content', 'ogatism_default_content');
+function ogatism_default_content($content) {
+  if (empty($content)) {
+    $str = <<<EOM
+## foo
+
+### bar
+
+#### baz
+
+
+
+
+---------------------------------
+- [test](https://example.com)
+
+EOM;
+
+  return $str;
+  } else {
+    return $content;
+  }
+}
+
+

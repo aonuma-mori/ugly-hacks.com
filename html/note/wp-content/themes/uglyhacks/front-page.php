@@ -94,8 +94,6 @@ include("block/common.php");
 				</div>
 			</div>
 
-
-
     </main>
     <footer>
       <div class="copyright">
