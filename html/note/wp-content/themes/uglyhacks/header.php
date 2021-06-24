@@ -80,8 +80,8 @@ include("block/common.php");
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="https://ugryhacks.com/note/docker/">Docker</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="https://ugryhacks.com/note/laravel/">Laravel</a></li>
+              <li><a class="dropdown-item" href="https://ugryhacks.com/note/profile/">Profile</a></li>
             </ul>
           </li>
         </ul>
