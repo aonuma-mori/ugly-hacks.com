@@ -76,3 +76,14 @@ EOM;
 }
 
 
+/* wordpress loop 順序変更 */
+function twpp_change_sort_order( $query ) {
+  if ( is_admin() || ! $query->is_main_query() ) {
+    return;
+  }
+  if ( $query->is_home() ) {
+    $query->set( 'order', 'DESC' );
+    $query->set( 'orderby', 'modified' );
+  }
+}
+add_action( 'pre_get_posts', 'twpp_change_sort_order' );
