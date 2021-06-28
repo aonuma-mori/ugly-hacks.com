@@ -442,15 +442,19 @@ body{
         }
       }
       .sidebar {
+        // sp
         @media (max-width: 575px) {
+          margin-top: 50px;
           background: #6c757d;
-          padding: 43px 10px;
+          padding: 20px 23px;
+          border-radius: 5px;
           .widget {
             // margin: 20px 0;
             list-style: none;
+            margin-bottom: 20px;
             h2.widgettitle {
               color: #fff;
-              font-size: 18px;
+              font-size: 19px;
               line-height: 26px;
               overflow: hidden;
             }
@@ -485,6 +489,7 @@ body{
             }
           }
         }
+        // tablet pc
         @media (min-width: 576px) {
           .widget {
             list-style: none;

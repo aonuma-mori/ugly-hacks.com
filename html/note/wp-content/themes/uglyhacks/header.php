@@ -72,16 +72,16 @@ include("block/common.php");
             <a class="nav-link" href="<?php echo $archives_path; ?>">Archives</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="https://ugryhacks.com/note/profile/">Profile</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Frequently index
+            Contents
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="https://ugryhacks.com/note/docker/">Docker</a></li>
               <li><a class="dropdown-item" href="https://ugryhacks.com/note/laravel/">Laravel</a></li>
-              <li><a class="dropdown-item" href="https://ugryhacks.com/note/profile/">Profile</a></li>
+              <li><a class="dropdown-item" href="https://ugryhacks.com/note/git/">Git</a></li>
             </ul>
           </li>
         </ul>
