@@ -91,6 +91,16 @@ body{
     .search-form {
       margin-top: 20px;
     }
+    /* Google search in site */
+    .search-form {
+      margin-top: 20px;
+      #___gcse_0 {
+        background: #c1c1c1;
+        #gsc-iw-id1 {
+          background: #00f;
+        }
+      }
+    }
     .page-header {
 	    .breadcrumb {
         @media (max-width: 575px) {
@@ -399,6 +409,7 @@ body{
     }
     /* topページ以外 */
     .article-block {
+      word-wrap: break-word;
       margin-top: 70px;
       .main {
         .article-cell {

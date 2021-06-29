@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="email=no,telephone=no,address=no">
-		<meta name="env" content="sand">
+		<meta name="env" content="prod">
     <title>Ugryhacks (アグリーハックス)</title>
     <meta name="description" content="WEB制作に関連する話題を扱う技術ブログです。PHP,Python,AWS,GCP,Javascript,Vue.jsなどモダンなWEB開発を中心に記事を書いております。">
     <meta name="robots" content="index,follow">
@@ -48,7 +48,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://localhost:8000/note">Home</a>
+            <a class="nav-link active" aria-current="page" href="/note">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/note/?page_id=59">Archives</a>
@@ -80,6 +80,10 @@
   </nav>
 </header>
 
+
+<script async src="https://cse.google.com/cse.js?cx=a0eeed13dd9e53f2a"></script>
+<div class="gcse-search"></div>
+
 <main>
 		<!-- <div id="app-1">{{ message }}</div>  -->
 		<script>
@@ -102,6 +106,17 @@
 							</svg>
 						</button>
 					</form> 
+				</div>
+			</div>	
+		</div>
+		
+		<div class="container search-form">
+			<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+			</div>
+				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+				<script async src="https://cse.google.com/cse.js?cx=a0eeed13dd9e53f2a"></script>
+					<div class="gcse-search"></div>
 				</div>
 			</div>	
 		</div>
