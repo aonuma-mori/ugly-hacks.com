@@ -2,6 +2,7 @@
 include("define.php");
 include("block/common.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/<?php echo $blog_page_type; ?>#">
@@ -42,7 +43,15 @@ include("block/common.php");
 			<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 		<?php endif; ?>
 
-    <!-- （googleアナリティクスを入れる箇所①） -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D688116ZM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4D688116ZM');
+    </script>
     <!-- （他アナリティクス等を入れる箇所） -->
     </head>
   <body>
@@ -63,25 +72,55 @@ include("block/common.php");
           </li>
           <li class="nav-item">
             <?php
-              if (WP_ENV == "sand") {
+              if (WP_ENV == "prod") {
+                $archives_path = "https://ugryhacks.com/note/archivepage/";
+              } else if (WP_ENV == "sand") {
                 $archives_path = "/note/?page_id=59";
               } else {
-                $archives_path = "/note/archivepage/";
+                $archives_path = "/note/?page_id=59";
               }
             ?>
             <a class="nav-link" href="<?php echo $archives_path; ?>">Archives</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://ugryhacks.com/note/profile/">Profile</a>
+            <?php
+              if (WP_ENV == "prod") {
+                $profile_path = "https://ugryhacks.com/note/profile/";
+              } else if (WP_ENV == "sand") {
+                $profile_path = "/note/?page_id=168";
+              } else {
+                $profile_path = "/note/?page_id=168";
+              }   
+            ?>
+            <a class="nav-link" href="<?php echo $profile_path; ?>">Profile</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Contents
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="https://ugryhacks.com/note/docker/">Docker</a></li>
-              <li><a class="dropdown-item" href="https://ugryhacks.com/note/laravel/">Laravel</a></li>
-              <li><a class="dropdown-item" href="https://ugryhacks.com/note/git/">Git</a></li>
+              <?php
+                if (WP_ENV == "prod") {
+                  $docker_path = "https://ugryhacks.com/note/docker/";
+                  $laravel_path = "https://ugryhacks.com/note/laravel/";
+                  $git_path = "https://ugryhacks.com/note/git/";
+                  $link_path = "https://ugryhacks.com/note/link/";
+                } else if (WP_ENV == "sand") {
+                  $docker_path = "https://ugryhacks.com/note/docker/";
+                  $laravel_path = "https://ugryhacks.com/note/laravel/";
+                  $git_path = "https://ugryhacks.com/note/git/";
+                  $link_path = "https://ugryhacks.com/note/link/";
+                } else {
+                  $docker_path = "https://ugryhacks.com/note/docker/";
+                  $laravel_path = "https://ugryhacks.com/note/laravel/";
+                  $git_path = "https://ugryhacks.com/note/git/";
+                  $link_path = "https://ugryhacks.com/note/link/";
+                }   
+              ?>
+              <li><a class="dropdown-item" href="<?php echo $docker_path; ?>">Docker</a></li>
+              <li><a class="dropdown-item" href="<?php echo $laravel_path; ?>">Laravel</a></li>
+              <li><a class="dropdown-item" href="<?php echo $git_path; ?>">Git</a></li>
+              <li><a class="dropdown-item" href="<?php echo $link_path; ?>">Link</a></li>
             </ul>
           </li>
         </ul>
