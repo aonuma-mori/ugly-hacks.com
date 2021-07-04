@@ -1,0 +1,43 @@
+body {
+  #top-banner {
+    margin-top: 2px;
+    background-image: url('../../assets/image/top/top-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #top-banner-text {
+      color: #fff;
+      p.lead {
+        color: #fff;
+        font-size: 15px;
+      }
+    }
+    
+    @media (max-width: 575px) {
+      height: 300px;
+      #top-banner-text {
+        display: none;
+        h1 {
+          color: #fff;
+        }
+      }
+    }
+    @media (min-width: 576px) {
+      height: 500px;
+    }
+  }
+  background: #fff;
+  .demo {
+    font-family: sans-serif;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 20px 30px;
+    margin-top: 1em;
+    margin-bottom: 40px;
+    user-select: none;
+    overflow-x: auto;
+  }
+}
+

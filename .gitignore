@@ -4,6 +4,12 @@
 mysql/*
 php7.2/*
 
+# app
+html/.env
+html/vendor
+your.log
+
+# wordpress
 html/note/.htaccess
 html/note/wp-config.php
 html/note/wp-content/languages/plugins/*
