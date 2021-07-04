@@ -68,7 +68,7 @@ include("block/common.php");
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?php echo $blog_home_url; ?>">Blog</a>
+            <a class="nav-link active" aria-current="page" href="/note/">Blog</a>
           </li>
           <li class="nav-item">
             <?php
