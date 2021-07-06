@@ -28,3 +28,8 @@ $ug_meta_og_url = "https://ugryhacks.com/";
 /* ./assets/image/icon/og-uglyhacks.png */
 $ug_meta_og_image = "https://ugryhacks.com/assets/image/icon/og-uglyhacks.png";
 
+/**
+ * Twitter
+ */
+$ug_twitter_rss = "http://twitter-great-rss.herokuapp.com/feed/user?name=a141828410&url_id_hash=3d0bcd52ad998ad6ed1b72d816af4d04544cb26b";
+

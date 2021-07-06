@@ -14,3 +14,5 @@ $log->pushHandler(new StreamHandler(__DIR__.'/your.log', Logger::WARNING));
 // add records to the log
 $log->warning('Foo');
 $log->error('Bar');
+
+
