@@ -1,6 +1,7 @@
 <?php
 require "config.php";
 require "app.php";
+// require "twitter_rss.php";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -88,7 +89,7 @@ require "app.php";
 	<div class="bg-light p-3 p-sm-5 mb-4 border-top top-banner" id="top-banner">
 		<div class="container" id="top-banner-text">
 			<h1 class="subtitle display-4">ugryhacks:system_porn_notebook()</h1>
-			<p class="lead">何も暴露しないが、何かを暴露しているように見えるブログです。</p>
+			<p class="lead">システムポルノノートブック</p>
 			<a class="btn btn-secondary btn-lg" href="/note/" role="button">Blog</a>
 		</div>
 	</div>
@@ -109,6 +110,25 @@ require "app.php";
 			</div>
 		</div>	
 	</div>
+
+  <!-- http://twitter-great-rss.herokuapp.com/feed/user?name=a141828410&url_id_hash=3d0bcd52ad998ad6ed1b72d816af4d04544cb26b -->
+  <div class="container twitter" id="twitter">
+    <div class="row">
+
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6" class="twitter-block" id="twitter-block">
+        <div class="image-frame">
+          <a href="https://twitter.com/a141828410" class="tw-account" target="_blank">
+            <img src="assets/image/icon/moriria1.jpg" class="twitter-icon" alt="モリリa1@a141828410">
+          </a>
+        </div>
+        <p>皆様からのフィードバックに基づき、パソコン版とノートパソコン版の Google Meet をシンプルにして、より多くの動画フィードとコンテンツを表示できるようにしたほか、コントロールも見つけやすくなりました。</p>
+			</div>
+
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        皆様からのフィードバックに基づき、パソコン版とノートパソコン版の Google Meet をシンプルにして、より多くの動画フィードとコンテンツを表示できるようにしたほか、コントロールも見つけやすくなりました。
+			</div>
+    </div>
+  </div>
 
 	<!-- <div class="container home">
 		<div class="row">

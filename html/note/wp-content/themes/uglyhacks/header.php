@@ -1,8 +1,8 @@
 <?php
+include( $_SERVER['DOCUMENT_ROOT']."/config.php");
 include("define.php");
 include("block/common.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
   <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/<?php echo $blog_page_type; ?>#">
@@ -10,9 +10,9 @@ include("block/common.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="email=no,telephone=no,address=no">
-		<meta name="env" content="<?php echo WP_ENV; ?>">
+		<meta name="env" content="<?php echo $ug_meta_env; ?>">
     <meta name="post_id" content="<?php echo $post_id; ?>">
-    <title><?php echo $blog_title; ?></title>
+    <title><?php echo $ug_meta_title; ?></title>
     <meta name="description" content="<?php echo $blog_description; ?>">
     <meta name="robots" content="index,follow">
     <meta property="og:admins" content="osamthing">
@@ -35,7 +35,7 @@ include("block/common.php");
     <script type="text/javascript" src="/note/wp-content/themes/uglyhacks/assets/js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="<?php echo BLOG_JS_PATH; ?>"></script>
     <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="（アップルタッチアイコンの画像URL）">
+    <link rel="apple-touch-icon-precomposed" href="/assets/image/favicons/apple-touch-icon.png">
 
 		<?php if (WP_ENV == 'prod') : ?>
 			<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
