@@ -4,7 +4,7 @@
  */
 
 /* local,sand,dev,test,stg,prod */
-$ug_meta_env = "sand";
+$ug_meta_env = "prod";
 
 /* deefault = 0 else for wordpress */
 $ug_meta_post_id = "0";
@@ -23,8 +23,8 @@ $ug_meta_description = "WEB技術のシステムポルノのノートブック�
 $ug_meta_og_admins = "roughlang";
 
 /* og:url */
-$ug_meta_og_url = "http://localhost:8000/";
+$ug_meta_og_url = "https://ugryhacks.com/";
 
 /* ./assets/image/icon/og-uglyhacks.png */
-$ug_meta_og_image = "http://localhost:8000/assets/image/icon/og-uglyhacks.png";
+$ug_meta_og_image = "https://ugryhacks.com/assets/image/icon/og-uglyhacks.png";
 
