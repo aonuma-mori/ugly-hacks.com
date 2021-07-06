@@ -2,6 +2,7 @@
 require "config.php";
 require "app.php";
 // require "twitter_rss.php";
+$tw = @file_get_contents("tw.txt");
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -121,7 +122,9 @@ require "app.php";
             <img src="assets/image/icon/moriria1.jpg" class="twitter-icon" alt="モリリa1@a141828410">
           </a>
         </div>
-        <p>皆様からのフィードバックに基づき、パソコン版とノートパソコン版の Google Meet をシンプルにして、より多くの動画フィードとコンテンツを表示できるようにしたほか、コントロールも見つけやすくなりました。</p>
+        <p>
+          <?php echo $tw; ?><span class="tw-icon"><img src="assets/image/icon/tw.png"></span>
+        </p>
 			</div>
 
       <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">

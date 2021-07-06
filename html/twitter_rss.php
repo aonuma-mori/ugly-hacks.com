@@ -5,6 +5,8 @@
 
 $twitter = new ServiceTwitterRssController();
 $twitter_rss = $twitter->getFreshRSS(0);
+/* ファイルに一時保存する */
+@file_put_contents("tw.txt", $twitter_rss);
 var_dump($twitter_rss);
 
 class ServiceTwitterRssController
@@ -57,6 +59,7 @@ class ServiceTwitterRssController
     } else {
       $this->tweets;
     }
+
     return $this->tweets;
   }
 }
