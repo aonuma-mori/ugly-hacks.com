@@ -12,7 +12,7 @@ $tw = @file_get_contents("tw.txt");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="email=no,telephone=no,address=no">
 		<meta name="env" content="<?php echo $ug_meta_env; ?>">
-    <meta name="post_id" content="<?php echo $ug_meta_post_id; ?>">
+    <meta name="post_id" content="<?php echo $parameter['ug_meta_post_id']; ?>">
     <title><?php echo $ug_meta_title; ?></title>
     <meta name="description" content="<?php echo $ug_meta_description; ?>">
     <meta name="robots" content="index,follow">

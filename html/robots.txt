@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /twitter_rss.php
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ugryhacks.com/sitemap.xml
