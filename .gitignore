@@ -8,6 +8,7 @@ php7.2/*
 html/.env
 html/vendor
 html/config.php
+html/tw.txt
 your.log
 
 # wordpress
