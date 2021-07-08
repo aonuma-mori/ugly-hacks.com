@@ -156,6 +156,16 @@ $tw = @file_get_contents("tw.txt");
 
 </main>
 
+
+
+    
+    <div class="container subfooter">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <a href="https://blogmura.com/ranking/in?p_cid=11110730" target="_blank"><img src="https://b.blogmura.com/logo-blogmura-circle.svg" width="40" height="40" border="0" alt="ブログランキング・にほんブログ村へ" /></a>
+        </div>
+      </div> 
+    </div> 
     <footer>
       <div class="copyright">
 				<p class="text-center">(c) 2021 uglyhacks.com All rights reserved.</p>
