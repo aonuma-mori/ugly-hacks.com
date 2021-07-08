@@ -1,8 +1,19 @@
 body {
+  .top-banner.lazyloaded {
+    margin-top: 2px;
+    background-image: url('../../assets/image/top/lazyloaded.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   #top-banner {
     margin-top: 2px;
     background-image: url('../../assets/image/top/top-banner.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
     background-size: 100% auto;
     display: flex;
     align-items: center;

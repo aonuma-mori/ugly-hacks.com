@@ -91,7 +91,8 @@ $tw = @file_get_contents("tw.txt");
 </header>
 
 <main>
-	<div class="bg-light p-3 p-sm-5 mb-4 border-top top-banner" id="top-banner">
+	<div class="bg-light p-3 p-sm-5 mb-4 border-top top-banner lazyload" id="top-banner">
+  <!-- <img src="dummy.jpg" data-src="/img/realimage.jpg" class="lazy"> -->
 		<div class="container" id="top-banner-text">
 			<h1 class="subtitle display-4"><?php echo $parameter['ug_subtitle']; ?></h1>
 			<p class="lead"><?php echo $parameter['ug_lead']; ?></p>
