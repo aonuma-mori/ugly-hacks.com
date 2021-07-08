@@ -1,7 +1,11 @@
 <?php
 require "config.php";
 require "app.php";
-// require "twitter_rss.php";
+
+/**
+ * 最新のTweetを1件取り出す（テキストのみ）
+ * service:: @twitter_rss.php
+ */
 $tw = @file_get_contents("tw.txt");
 ?>
 <!DOCTYPE html>
@@ -57,7 +61,7 @@ $tw = @file_get_contents("tw.txt");
   <div class="break-point-bar"></div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand site-title" href="/"><h1 class="site-title">Uglyhacks</h1></a>
+      <a class="navbar-brand site-title" href="<?php echo $parameter['ug_url']; ?>"><h1 class="site-title">Uglyhacks</h1></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>    
@@ -67,14 +71,14 @@ $tw = @file_get_contents("tw.txt");
             <a class="nav-link active" aria-current="page" href="<?php echo $ug_meta_og_url; ?>/note/">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/note/?page_id=59">Archives</a>
+            <a class="nav-link" href="<?php echo $parameter['ug_url'].$parameter['ug_archives_page']; ?>">Archives</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://ugryhacks.com/note/profile/">Profile</a>
+            <a class="nav-link" href="<?php echo $parameter['ug_url'].$parameter['ug_profile_page'];?>">Profile</a>
           </li>
         </ul>
       </div>
-      <form action="http://localhost:8000/note" class="d-flex align-items-end pc searchform" role="search" method="get" id="searchform">
+      <form action="<?php echo $parameter['ug_url']; ?>/note" class="d-flex align-items-end pc searchform" role="search" method="get" id="searchform">
         <input name="s" id="s" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-secondary" type="submit" name="search">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -89,8 +93,8 @@ $tw = @file_get_contents("tw.txt");
 <main>
 	<div class="bg-light p-3 p-sm-5 mb-4 border-top top-banner" id="top-banner">
 		<div class="container" id="top-banner-text">
-			<h1 class="subtitle display-4">ugryhacks:system_porn_notebook()</h1>
-			<p class="lead">システムポルノノートブック</p>
+			<h1 class="subtitle display-4"><?php echo $parameter['ug_subtitle']; ?></h1>
+			<p class="lead"><?php echo $parameter['ug_lead']; ?></p>
 			<a class="btn btn-secondary btn-lg" href="/note/" role="button">Blog</a>
 		</div>
 	</div>
@@ -100,7 +104,7 @@ $tw = @file_get_contents("tw.txt");
 			<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
 		</div>
 			<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-				<form action="http://localhost:8000/note" class="d-flex align-items-end sp text-right">
+				<form action="<?php echo $parameter['ug_url']; ?>/note" class="d-flex align-items-end sp text-right">
 					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 					<button class="btn btn-secondary" type="submit">
 						<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

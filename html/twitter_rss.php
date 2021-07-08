@@ -4,27 +4,23 @@ require_once 'vendor/autoload.php';
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
+/**
+ * $log->info('Foo');
+ * $log->notice('Foo');
+ * $log->warning('Foo');
+ * $log->error('Foo');
+ * $log->critical('Foo');
+ * $log->alert('Foo');
+ * $log->emergency('Foo');
+ */
 $log = new Logger('twitter_rss');
-
 $log->pushHandler(new StreamHandler(__DIR__.'/your.log', Logger::INFO));
 
-// add records to the log
-/**
- * info
- * notice
- * warning
- * error
- * critical
- * alert
- * emergency
- */
-// $log->warning('Foo');
-// $log->error('Bar');
+
 
 /**
  * Twitter RSS
  */
-
 $twitter = new ServiceTwitterRssController();
 $twitter_rss = $twitter->getFreshRSS(0);
 /* ファイルに一時保存してトップページで取り出す */
@@ -33,18 +29,19 @@ if ($old_twitter_rss != $twitter_rss) {
   @file_put_contents("tw.txt", $twitter_rss);
   $log->info($twitter_rss);
 } else {
-  $log->info('No updates');
+  // $log->info('No updates');
+  // nothing
 }
 
 
-// var_dump($twitter_rss);
 
 
 
 
 
-
-
+/**
+ * 
+ */
 class ServiceTwitterRssController
 {
   public $twitter_rss_url = "http://twitter-great-rss.herokuapp.com/feed/user?name=a141828410&url_id_hash=3d0bcd52ad998ad6ed1b72d816af4d04544cb26b";
@@ -68,6 +65,7 @@ class ServiceTwitterRssController
          * 画像(メディア)のツィートはいったん削除（スキップ）
          * @userへの返信はスキップ
          * url付きの投稿はスキップ
+         * 画像投稿は削除
          */
         if (preg_match("/'http:\/\/pbs.twimg.com\/media\//",$tweet)) {  
           continue;
