@@ -1,13 +1,49 @@
 <?php
+require_once 'vendor/autoload.php';
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
+$log = new Logger('twitter_rss');
+
+$log->pushHandler(new StreamHandler(__DIR__.'/your.log', Logger::INFO));
+
+// add records to the log
+/**
+ * info
+ * notice
+ * warning
+ * error
+ * critical
+ * alert
+ * emergency
+ */
+// $log->warning('Foo');
+// $log->error('Bar');
+
 /**
  * Twitter RSS
  */
 
 $twitter = new ServiceTwitterRssController();
 $twitter_rss = $twitter->getFreshRSS(0);
-/* ファイルに一時保存する */
-@file_put_contents("tw.txt", $twitter_rss);
-var_dump($twitter_rss);
+/* ファイルに一時保存してトップページで取り出す */
+$old_twitter_rss = @file_get_contents("tw.txt");
+if ($old_twitter_rss != $twitter_rss) {
+  @file_put_contents("tw.txt", $twitter_rss);
+  $log->info($twitter_rss);
+} else {
+  $log->info('No updates');
+}
+
+
+// var_dump($twitter_rss);
+
+
+
+
+
+
 
 class ServiceTwitterRssController
 {

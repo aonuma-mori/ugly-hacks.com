@@ -160,7 +160,7 @@ $tw = @file_get_contents("tw.txt");
     
   </body>
 
-<script type="text/javascript" src="assets/js/top-vue-component.js"></script>
+  <script type="text/javascript" src="assets/js/top-vue-component.js"></script>
 </html>
 
 
