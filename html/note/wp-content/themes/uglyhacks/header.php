@@ -34,7 +34,7 @@ include("block/common.php");
     <script type="text/javascript" src="/note/wp-content/themes/uglyhacks/assets/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="/note/wp-content/themes/uglyhacks/assets/js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="<?php echo BLOG_JS_PATH; ?>"></script>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="/assets/image/favicons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/assets/image/favicons/apple-touch-icon.png">
 
 		<?php if (WP_ENV == 'prod') : ?>
@@ -138,28 +138,28 @@ include("block/common.php");
 </header>
 
 <main>
-		<!-- <div id="app-1">{{ message }}</div>  -->
-		<script>
-		var app1 = new Vue({
-			el: '#app-1',                        /* #app-1 要素に対して Vue を適用する */
-			data: { message: 'Hello world!' }    /* message という名前のデータを定義する */
-		});
+  <!-- <div id="app-1">{{ message }}</div>  -->
+  <script>
+  var app1 = new Vue({
+    el: '#app-1',                        /* #app-1 要素に対して Vue を適用する */
+    data: { message: 'Hello world!' }    /* message という名前のデータを定義する */
+  });
 
-		</script>
+  </script>
 
-		<div class="container search-form">
-			<div class="row">
-			<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-			</div>
-				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-					<form action="<?php echo $blog_home_url; ?>" class="d-flex align-items-end sp text-right">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-secondary" type="submit">
-							<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-								<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-							</svg>
-						</button>
-					</form> 
-				</div>
-			</div>	
-		</div>
+  <div class="container search-form">
+    <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+    </div>
+      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+        <form action="<?php echo $blog_home_url; ?>" class="d-flex align-items-end sp text-right">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
+        </form> 
+      </div>
+    </div>	
+  </div>

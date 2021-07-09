@@ -14,6 +14,7 @@ your.log
 # wordpress
 html/note/.htaccess
 html/note/wp-config.php
+html/note/wp-content/languages/*
 html/note/wp-content/languages/plugins/*
 html/note/wp-content/plugins/*
 html/note/wp-content/uploads/*

@@ -1,4 +1,5 @@
 <?php
+include("../config.php");
 include("define.php");
 include("block/common.php");
 ?>
@@ -32,12 +33,23 @@ include("block/common.php");
       <?php echo mb_substr(get_the_title(),0,12)."..."; ?>
     <span>
 	</p>
+</div>
 
 <div class="container article-block">
   <div class="row">
     <div class="col-sm-7 col-md-8 col-lg-9 main">
       <div class="single-article">
         <h2><?php echo the_title(); ?></h2>
+        <?php
+          /* 許可されたIPアドレスのみ編集可能 */
+          foreach ($parameter["ug_allow_ips"] as $allowip) {
+            if ($_SERVER["REMOTE_ADDR"] == $allowip) {
+              edit_post_link('EDIT POST' , '<p class="edit_post_link">' , '</p>');
+              break;
+            }
+          }
+          echo "<!--".$_SERVER["REMOTE_ADDR"]."-->";
+        ?>
         <div class="single-article-text">
           <?php the_content(); ?>
           <br clear="both">
@@ -61,11 +73,13 @@ include("block/common.php");
 
 
 </main><!-- header-include -->
+
   <footer>
     <div class="copyright">
       <p class="text-center">(c) 2021 uglyhacks.com All rights reserved.</p>
     </div>
   </footer>
+
 <script type="text/javascript" src="（ここにjsのURL）"></script>
 </body>
 </html>

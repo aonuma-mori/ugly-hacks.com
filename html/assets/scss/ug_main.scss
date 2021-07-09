@@ -23,6 +23,11 @@ body {
       p.lead {
         color: #fff;
         font-size: 15px;
+        background: #000;
+        border-radius: 10px;
+        width: 40%;
+        padding: 10px 20px;
+        opacity: 0.5;
       }
     }
     
@@ -62,6 +67,13 @@ body {
   }
   main {
     // margin-top: 50px;
+    .block2 {
+      margin-top: 30px;
+    }
+    .text-block {
+      line-height: 35px;
+      color: #444444;
+    }
     #twitter {
       margin-top: 50px;  
       #twitter-block {
