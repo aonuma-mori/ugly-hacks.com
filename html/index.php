@@ -94,7 +94,10 @@ $tw = @file_get_contents("tw.txt");
 	<div class="bg-light p-3 p-sm-5 mb-4 border-top top-banner lazyload" id="top-banner">
 		<div class="container" id="top-banner-text">
 			<h1 class="subtitle display-4"><?php echo $parameter['ug_subtitle']; ?></h1>
-			<p class="lead"><?php echo $parameter['ug_lead']; ?></p>
+			<p class="lead">
+        <?php echo $tw; ?><span class="tw-icon">
+        <?php //echo $parameter['ug_lead']; ?>
+      </p>
       <br>
 			<a class="btn btn-secondary btn-lg" href="/note/" role="button">Blog</a>
 		</div>
@@ -156,9 +159,6 @@ $tw = @file_get_contents("tw.txt");
 	</div> -->
 
 </main>
-
-
-
     
     <div class="container subfooter">
       <div class="row">

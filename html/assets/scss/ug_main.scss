@@ -21,23 +21,32 @@ body {
     #top-banner-text {
       color: #fff;
       p.lead {
+        margin-top: 35px;
         color: #fff;
         font-size: 15px;
         background: #000;
         border-radius: 10px;
         width: 40%;
         padding: 10px 20px;
-        opacity: 0.5;
+        opacity: 0.6;
+        padding: 15px;
+        @media (max-width: 575px) { width: 100%; }
+        @media (min-width: 576px) and (max-width: 768px) { width: 80%; }
+        @media (min-width: 769px) and (max-width: 992px) { width: 60%; }
+        @media (min-width: 993px) and (max-width: 1200px) { width: 50%; }
+        @media (min-width: 1201px) { width: 40%; }
       }
     }
     
     @media (max-width: 575px) {
       height: 300px;
       #top-banner-text {
-        display: none;
+        
         h1 {
-          color: #fff;
-          letter-spacing: 2px;
+          display: none;
+        }
+        .btn {
+          display: none;
         }
       }
     }
