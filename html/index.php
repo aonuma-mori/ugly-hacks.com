@@ -6,7 +6,7 @@ require "app.php";
  * 最新のTweetを1件取り出す（テキストのみ）
  * service:: @twitter_rss.php
  */
-$tw = @file_get_contents("tw.txt");
+$tw = @file_get_contents("./batch/tweets_newest.json");
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -41,7 +41,10 @@ $tw = @file_get_contents("tw.txt");
     <script type="text/javascript" src="/note/wp-content/themes/uglyhacks/assets/js/main.js"></script>
     <link rel="icon" href="assets/image/favicons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="assets/image/favicons/apple-touch-icon.png">
-		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
 		
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D688116ZM"></script>
@@ -123,21 +126,43 @@ $tw = @file_get_contents("tw.txt");
   <!-- http://twitter-great-rss.herokuapp.com/feed/user?name=a141828410&url_id_hash=3d0bcd52ad998ad6ed1b72d816af4d04544cb26b -->
   <div class="container twitter" id="twitter">
     <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 block2 text-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              a
+            </div>    
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              b
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              c
+            </div>    
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              d
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 block2 twitter-block" id="twitter-block">
         <div class="image-frame">
           <a href="https://twitter.com/a141828410" class="tw-account" target="_blank">
             <img src="assets/image/icon/moriria1.jpg" class="twitter-icon" alt="モリリa1@a141828410">
           </a>
+        </div> 
+
+        <div id="tweet">
+          <ul>
+            <!-- assets/js/tweet.js -->
+            <li v-for="(item, index) in tweets" v-bind:key="item.num">
+              {{ item.tw }} <p class="date">{{ item.date }}</p>
+            </li>
+          </ul>
         </div>
-        <p>
-          <?php echo $tw; ?><span class="tw-icon"><img src="assets/image/icon/tw.png"></span>
-        </p>
 			</div>
 
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 block2 text-block">
-        皆様からのフィードバックに基づき、パソコン版とノートパソコン版の Google Meet をシンプルにして、より多くの動画フィードとコンテンツを表示できるようにしたほか、コントロールも見つけやすくなりました。
-			</div>
+      
     </div>
   </div>
 
@@ -175,7 +200,7 @@ $tw = @file_get_contents("tw.txt");
     </footer>
     
   </body>
-
+  <script type="text/javascript" src="assets/js/tweet.js"></script>
   <script type="text/javascript" src="assets/js/top-vue-component.js"></script>
 </html>
 

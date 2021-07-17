@@ -1,0 +1,14 @@
+# wordpress rest api
+
+###
+GET https://ugryhacks.com/note/wp-json/wp/v2/posts
+
+###
+GET https://ugryhacks.com/note/wp-json/wp/v2/posts/1
+
+###
+GET https://ugryhacks.com/note/wp-json/wp/v2/categories
+
+###
+GET https://ugryhacks.com/note/wp-json/wp/v2/pages
+
