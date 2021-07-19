@@ -83,6 +83,52 @@ body {
       line-height: 35px;
       color: #444444;
     }
+    .twitter {
+      margin-top: 50px;
+      .twitter-block-1 {
+        .statistics {
+          padding-top:30px;
+          padding-bottom: 30px;
+          background: #f5f5f5;
+          border-radius: 10px;
+          .statistics_name {
+            font-size: 13px;
+            letter-spacing: 1px;
+          }
+          .statistics_value {
+            font-size: 72px;
+            letter-spacing: 4px;
+          }
+        }
+      }
+      .twitter-block-2 {
+        // background: #f5f5f5;
+        ul {
+          li:first-child {
+            list-style: none;
+            font-size: 36px;
+            .date {
+              margin-top: 5px;
+              font-size: 13px;
+              color: #888;
+              margin-left: 10px;
+            }
+          }
+          li {
+            list-style: none;
+            font-size: 17px;
+            margin-bottom: 30px;
+            .date {
+              margin-top: 5px;
+              font-size: 13px;
+              color: #888;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+     }
+
     #twitter {
       margin-top: 50px;  
       #twitter-block {

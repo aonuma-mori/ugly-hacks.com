@@ -50,8 +50,18 @@ if ($blog_posts_count !== $c_blog_posts_count) {
   $display_blog_posts_count = $c_blog_posts_count;
   echo "no update: ".$display_blog_posts_count."<br>\n";
 }
-$data["blog_posts"] = $display_blog_posts_count;
-$data["dummy"] = "hoge";
+$data[0] = [
+  "no" => "0", 
+  "name" => "blog posts",
+  "value" => $display_blog_posts_count,
+];
+$data[1]  = [
+  "no" => "1", 
+  "name" => "dummy",
+  "value" => "9999",
+];
+
+
 
 
 $json_date = json_encode($data);

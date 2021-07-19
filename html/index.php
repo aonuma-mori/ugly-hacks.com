@@ -123,65 +123,48 @@ $tw = @file_get_contents("./batch/tweets_newest.json");
 		</div>	
 	</div>
 
-  <!-- http://twitter-great-rss.herokuapp.com/feed/user?name=a141828410&url_id_hash=3d0bcd52ad998ad6ed1b72d816af4d04544cb26b -->
-  <div class="container twitter" id="twitter">
+  <div class="container twitter" id="tweet">
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 block2 text-block">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              a
-            </div>    
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              b
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              c
-            </div>    
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              d
-            </div>
+      <!-- assets/js/tweet.js -->
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 block2 twitter-block-1">
+        <div class="container statistics">
+        <div class="row">
+          <div v-for="(item, index) in statistics" v-bind:key="item.no" class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <p class="statistics_name">{{ item.name }}</p>
+            <p class="statistics_value">{{ item.value }}</p>
+          </div>    
+          <!--
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            c
+          </div>    
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            d
+          </div>
+          -->
           </div>
         </div>
       </div>
 
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 block2 twitter-block" id="twitter-block">
-        <div class="image-frame">
-          <a href="https://twitter.com/a141828410" class="tw-account" target="_blank">
-            <img src="assets/image/icon/moriria1.jpg" class="twitter-icon" alt="モリリa1@a141828410">
-          </a>
-        </div> 
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 block2 twitter-block-2">
+        <ul>
+          <li v-for="(item, index) in tweets" v-bind:key="item.num">
+            {{ item.tw }} <p class="date">{{ item.date }}</p>
+          </li>
+        </ul>
+      </div>
 
-        <div id="tweet">
-          <ul>
-            <!-- assets/js/tweet.js -->
-            <li v-for="(item, index) in tweets" v-bind:key="item.num">
-              {{ item.tw }} <p class="date">{{ item.date }}</p>
-            </li>
-          </ul>
-        </div>
-			</div>
-
-      
     </div>
-  </div>
+  </diiv>
 
-	<!-- <div class="container home">
-		<div class="row">
-			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
-				hoge
-			</div>
-			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
-				hoge
-			</div>
-			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
-				hoge
-			</div>
-			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
-				hoge
-			</div>
-		</div>
-	</div> -->
+
+
+
+
+
+
+
+
+
 
 </main>
     
