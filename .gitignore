@@ -10,6 +10,10 @@ html/vendor
 html/config.php
 html/tw.txt
 your.log
+html/batch/tweets_newest.json
+html/batch/tweets_numbers.json
+html/batch/tweets_update.log
+
 
 # wordpress
 html/note/.htaccess
