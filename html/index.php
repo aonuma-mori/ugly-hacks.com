@@ -133,14 +133,16 @@ $tw = @file_get_contents("./batch/tweets_newest.json");
             <p class="statistics_name">{{ item.name }}</p>
             <p class="statistics_value">{{ item.value }}</p>
           </div>    
-          <!--
+          
           <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            c
+            <p class="statistics_name">foo</p>
+            <p class="statistics_value">9999</p>
           </div>    
           <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            d
+            <p class="statistics_name">foo</p>
+            <p class="statistics_value">9999</p>
           </div>
-          -->
+         
           </div>
         </div>
       </div>
