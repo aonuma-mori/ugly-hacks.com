@@ -45,7 +45,7 @@ $tw = @file_get_contents("./batch/tweets_newest.json");
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     
-		
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D688116ZM"></script>
     <script>
@@ -135,12 +135,12 @@ $tw = @file_get_contents("./batch/tweets_newest.json");
           </div>    
           
           <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <p class="statistics_name">foo</p>
-            <p class="statistics_value">9999</p>
+            <p class="statistics_name">access</p>
+            <p class="statistics_value"><?php echo $access_count; ?></p>
           </div>    
           <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <p class="statistics_name">foo</p>
-            <p class="statistics_value">9999</p>
+            <p class="statistics_name">date time</p>
+            <p class="statistics_value" id="realdatetime"><!-- display date time --></p>
           </div>
          
           </div>
@@ -187,6 +187,7 @@ $tw = @file_get_contents("./batch/tweets_newest.json");
   </body>
   <script type="text/javascript" src="assets/js/tweet.js"></script>
   <script type="text/javascript" src="assets/js/top-vue-component.js"></script>
+  <script type="text/javascript" src="assets/js/realdatetime.js"></script>
 </html>
 
 

@@ -23,3 +23,6 @@ html/note/wp-content/languages/*
 html/note/wp-content/languages/plugins/*
 html/note/wp-content/plugins/*
 html/note/wp-content/uploads/*
+
+# private
+twitter/

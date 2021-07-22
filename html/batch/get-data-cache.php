@@ -41,6 +41,21 @@ try {
  * 
  */
 
+// $count = "";
+$table_count = $parameter["ug_other_prefix"]."statistics";
+$access_count_query = "SELECT count FROM ".$table_count." where name='count'";
+// var_dump($access_count_query);
+$stmt = $wp_pdo->query($access_count_query);
+foreach ($stmt as $k=>$count) {
+  $access_count = $count[0] + 1;
+}
+$update_access_count_query = "UPDATE ".$table_count." SET count = ".$access_count.", update_date = NOW() where name = 'count';";
+$stmt = $wp_pdo->query($update_access_count_query);
+echo $access_count."<br>\n";
+
+
+
+
 
 /**
  * ブログの記事数を取得する(Wordpress)
@@ -75,6 +90,12 @@ if ($blog_posts_count !== $c_blog_posts_count) {
 }
 echo "display count: ".$display_blog_posts_count."<br>\n";
 
+
+/**
+ * write on ...
+ * 
+ * 
+ */
 $data[0] = [
   "no" => "0", 
   "name" => "blog posts",
@@ -84,10 +105,10 @@ $data[0] = [
 ];
 $data[1]  = [
   "no" => "1", 
-  "name" => "dummy",
-  "value" => "9999",
-  "previous_count" => "+++++++",
-  "current_count" => "+++++++",
+  "name" => "access",
+  "value" => $access_count,
+  "previous_count" => NULL,
+  "current_count" => NULL,
 ];
 
 $json_date = json_encode($data);
