@@ -786,7 +786,23 @@ body{
           }
         }
       }
+    }
 
+    .trans-article {
+      // background: #f00;
+      margin: 0 auto;
+      width: 100%;
+      color: #666;
+      font-size: 13px;
+      a:link, a:visited {
+        text-decoration: none;
+        margin: 0 10px;
+        color: #4682b4;
+      }
+      a:hover, a:active {
+        text-decoration: underline;
+        color: #4682b4;
+      }
     }
   }//main
 

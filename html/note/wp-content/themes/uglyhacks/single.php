@@ -66,8 +66,16 @@ include("block/common.php");
       <?php endif; ?>
     </div>
   </div>
-</div>
 
+  <div class="trans-article">
+    <?php if (get_previous_post()):?>
+    <?php previous_post_link('←%link', '前の記事へ'); ?>
+    <?php endif; ?>| 
+    <?php if (get_next_post()):?>
+    <?php next_post_link('%link→', '次の記事へ'); ?>
+    <?php endif; ?>
+  </div>
+</div>
 
 
 
