@@ -55,6 +55,7 @@ add_filter('the_editor_content', 'ogatism_default_content');
 function ogatism_default_content($content) {
   if (empty($content)) {
     $str = <<<EOM
+
 ## foo
 
 ### bar
@@ -65,7 +66,10 @@ function ogatism_default_content($content) {
 
 
 ---------------------------------
-- [test](https://example.com)
+Reference:
+- <a href="#" target="_blank">foo</a>
+- <a href="#" target="_blank">bar</a>
+
 
 EOM;
 
